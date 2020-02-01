@@ -1,0 +1,9 @@
+int myNum = 5;
+float myFloatNum = 6.99;
+double myDoubleNum = 8.55;
+char my Letter = 'D';
+bool myBoolean = true;
+string myText = "Hello";
+
+Basic Data Types
+
