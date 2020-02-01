@@ -1,0 +1,38 @@
+/* print text */
+/ The cout  - object   << - operator used as output values or print text
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  cout << "Hello World!";
+  return 0;
+}
+
+/* can add as many as cout objects  and it does not insert a new line at the end of out put *-/
+/* \n character create blank line */
+
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  cout << "Hello World! \n";
+  cout << " Learning c++";
+  return 0;
+}
+
+
+/* another way to insert blank line is end1 */
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  cout << "Hello World!" end1;
+  cout << " Learning c++";
+  return 0;
+}
