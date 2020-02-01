@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  cout << "Hello World!";
+  return 0;
+}
+
+
+
+/* line1: #include <iostream> is header file library  used in i/p and o/p objects, like cout */
+/*                            Header files add functionality to C++ programs. */
+
+/* line2: using namespace std - uses names for objects and variables from the standard library. */
+
+/* line 3: blank line ignores white space */
+
+/* line 4: int main() - is called main function and code inside its culy brackets {} is executed */
+
+/* Every statement in C++ ends with semicolon ;
+
+/* the body of int main() is also written as:
+int main() { cout << "Hello World! "; return 0; }
+
+/* compiler ignores white spaces. multiple lines makes the code readable */
+
+/* return 0 ends the main function */
+
+
+
+/* omitting namesoace std and replaced with std keyword, followed by :: operatior for some objects */
+
+#include <iostream>
+
+int main()
+
+{
+  std::cout << "Hello World!";
+  return 0;
+}
+
