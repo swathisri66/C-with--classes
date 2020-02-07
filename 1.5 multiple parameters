@@ -1,0 +1,15 @@
+//function using multiple parameters//
+#include <iostream>
+using namespace std;
+
+int addNumbers(int x, int y, int a, int b){
+	int answer = x + y + a + b;
+	return answer; //final calculation return back//
+	
+}
+
+int main() 
+{
+	cout << addNumbers(43, 86, 78, 98); //print return value of the numbers//
+	return 0;//program ran successfully//
+}
