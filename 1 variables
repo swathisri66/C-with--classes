@@ -1,0 +1,34 @@
+//simple variable//
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int n = 14;
+	cout << n;
+	
+	return 0;
+}
+
+// airthmetic operations//
+	
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int a = 14;
+	int b = 21;
+	
+	int sum = a + b;
+	int diff = a - b;
+	int prod = a * b;
+	int div = a / b;
+	int mod = a % b;
+		
+	cout << sum;
+	
+	return 0;
+}
