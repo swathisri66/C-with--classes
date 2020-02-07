@@ -1,0 +1,12 @@
+//function using parameters//
+#include <iostream>
+using namespace std;
+
+void printCrap(int x) {//void - return nothing//
+	cout << "c++ is important for all programmers and its grade " << x << endl;
+}	
+int main() //main function//
+{
+	printCrap(10);
+	return 0;
+}
