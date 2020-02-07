@@ -1,0 +1,21 @@
+//classes and objects//
+//classes is group of functions and objects, and variables//
+//group lllr function in the same class//
+#include <iostream>
+using namespace std;
+
+class SwathiClass{ //declaring class//
+//access specifiers//
+	public:
+		void coolSaying() { //creating function//
+			cout << "preaching to the choir" << end1;
+		}
+	};
+	//object access in the class//
+
+int main() 
+{
+	SwathisClass SwathiObject;
+	swathiObject.coolSaying();//dot seperator used in acessing the variables and funtions inside the class//
+	return 0;//program ran successfully//
+}
