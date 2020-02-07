@@ -1,0 +1,56 @@
+//basic if statement//
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int a = 9;
+	int b = 6;
+	
+	if(a > b){
+		cout << "c++ is good";
+	}
+	
+		return 0;
+}
+
+
+//functions//
+
+#include <iostream>
+
+using namespace std;
+
+void printSomething()//prototype// 
+
+int main() //main function//
+{
+		printSomething();
+		return 0;
+}
+
+void printSomething(){//call the function and parameters//
+	cout << " text on the screen";
+}
+
+
+( or)
+ 
+ 
+ #include <iostream>
+
+using namespace std;
+
+void printSomething(){//call the function and parameters//
+	cout << " text on the screen";
+
+int main() //main function//
+{
+		printSomething();
+		return 0;
+}
+
+
+
