@@ -1,0 +1,53 @@
+//using  variables in classes//
+#include <iostream>
+#include <string> //string is another name for text//
+using namespace std;
+
+class SwathiClass{ //declaring class//
+//access specifiers//
+	public:
+		string name; //error don't make class variables public//
+		
+	};
+	
+int main() 
+{
+	SwathiClass so; //create object so//
+	so.name = "Swathi Kamani"; //variable name is used from dot seperator//
+	cout << so.name;
+	return 0;//program ran successfully//
+}
+
+
+
+
+
+/* the correct way of writing //
+
+//using  variables in classes//
+#include <iostream>
+#include <string> //string is another name for text//
+using namespace std;
+
+class SwathiClass{ //declaring class//
+//access specifiers//
+	public:
+		void setName(string x){ //change - set the name and get the variable two functions//
+			name = x;
+		}
+		string getName(){
+			return name;
+		}
+			
+	private:
+		string name;
+		
+	};
+	
+	int main()
+	{
+		SwathiClass so;
+		so.setname("Swathi Kamani");
+		cout << so.getName();
+		return 0;
+	}
