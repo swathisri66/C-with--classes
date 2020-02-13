@@ -1,0 +1,203 @@
+/* Creating functions with parameters and with return value */
+
+#include<stdio.h>
+
+int main()
+{
+  int add(int,int); // Function Declaration
+  int a,b,c;
+  printf("Enter any two numbers : ");
+  scanf("%d %d",&a,&b);
+  c = add(a,b); // Function Call
+  printf("Sum = %d",c);
+}
+int add(int x,int y) // Function Definition
+{
+  int z;
+  z = x + y;
+  return z;
+}
+================================================
+/* Creating functions with parameters and without return value */
+
+#include<stdio.h>
+
+int main()
+{
+  void add(int,int);
+  int a,b;
+  printf("Enter any two numbers : ");
+  scanf("%d %d",&a,&b);
+  add(a,b);
+}
+
+void add(int x,int y)
+{
+  int z;
+  z = x + y;
+  printf("Sum = %d",z);
+}
+===============================================
+/* Creating functions without parameters and with return value */
+
+#include<stdio.h>
+
+int main()
+{
+  int add(void);
+  int c;
+  c = add();
+  printf("Sum = %d",c);
+}
+
+int add(void)
+{
+  int x,y,z;
+  printf("Enter any two numbers : ");
+  scanf("%d %d",&x,&y);
+  z = x + y;
+  return z;
+}
+================================================
+/* Creating functions without parameters and without return value */
+
+#include<stdio.h>
+
+int main()
+{
+  void add(void);
+  add();
+}
+void add(void)
+{
+  int x,y,z;
+  printf("Enter any two numbers : ");
+  scanf("%d %d",&x,&y);
+  z = x + y;
+  printf("Sum = %d",z);
+}
+=================================================
+/* Creating multiple functions in a program */
+
+#include<stdio.h>
+
+int main()
+{
+ int add(int,int);
+ int sub(int,int);
+ int mul(int,int);
+ int div(int,int);
+ int a,b;
+ printf("Enter any two numbers : ");
+ scanf("%d %d",&a,&b);
+ printf("\n Sum = %d",add(a,b));
+ printf("\n Difference = %d",sub(a,b));
+ printf("\n Product = %d",mul(a,b));
+ printf("\n Division = %d",div(a,b));
+}
+int add(int x,int y)
+{
+  return x + y;
+}
+int sub(int x,int y)
+{
+  return x - y;
+}
+int mul(int x,int y)
+{
+  return x * y;
+}
+int div(int x,int y)
+{
+  return x / y;
+}
+===================================================
+/* Passing different number and types of parameters to a function */
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+ int add(int,int);
+ clrscr();
+ printf(" Passing 10,20 : %d",add(10,20));
+ printf("\n Passing 12.25,22.5 : %d",add(12.25,22.5));
+ printf("\n Passing 'A','B' : %d",add('A','B'));
+// printf("\n Passing 'hello','world' : %d",add("hello","world")); => Error
+
+// printf("\n Passing 10 : %d",add(10)); => Error
+// printf("\n Passing 10,20,30 : %d",add(10,20,30)); => Error
+
+ printf("\n Passing 10,20,30 : %d",add(add(10,20),30));
+ printf("\n Passing 10,20,30,40 : %d",add(add(add(10,20),30),40));
+ printf("\n Passing 10,20,30,40 : %d",add(add(10,20),add(30,40)));
+ getch();
+}
+
+int add(int x,int y)
+{
+ return x + y;
+}
+====================================================
+Declaring constants in C :
+
+1) Using "const" keyword :
+const datatype name = value;
+Eg:
+const float PI = 3.1415;
+
+2) Using #define pre-processor directive
+#define constant-name constant-value
+Eg:
+#define PI 3.1415
+
+/* Program to implement constants */
+
+#include<stdio.h>
+#define PI 3.1415
+
+int main()
+{
+  float r,area,peri;
+  printf("Enter value of r : ");
+  scanf("%f",&r);
+  area = PI * r * r;
+  peri = 2 * PI * r;
+  printf("\n Area of Circle = %f",area);
+  printf("\n Perimeter of Circle = %f",peri);
+}
+===============================================
+Global and Local variables :
+
+=> If we want to make a variable available to a single function in a program, it is declared "local". Any variable declared inside a function is a local variable. The variable declared as local in one function cannot be accessed outside.
+
+=> If we want to make a variable available to more than one function in a program, it is declared "global". That is, if we want to make some data shared between serveral functions, it is declared "global".
+===============================================
+/* Program to implement global variables */
+
+#include<stdio.h>
+
+int a = 100; // Global variable
+
+int main()
+{
+  void fun1(void);
+  void fun2(void);
+  a = a + 100;
+  printf("Value of a in main = %d",a); => 200
+  fun1();
+  fun2();
+}
+
+void fun1(void)
+{
+ a = a * 4;
+ printf("\nValue of a in fun1 = %d",a); => 800
+}
+
+void fun2(void)
+{
+ a = a / 10;
+ printf("\nValue of a in fun2 = %d",a); => 80
+}
