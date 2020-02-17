@@ -1,0 +1,71 @@
+/* comment line for 
+   multiple lines*/
+// single line comment
+#include <header files>
+#define <constants>
+global declarations (functions or variables)
+class <class name>
+{
+   private:
+     ...........
+     ..members..
+   public:
+     ...........
+     ..members..
+   protected:
+     ...........
+     ..members..
+};  // class closing
+int main()
+{
+   local variables
+    create objects of the class and use 
+    the eligible member with the object
+   ............
+    statements
+   ............
+}
+-------------------------------------
+Datatype in C++
+---------------
+All C-Language datatypes are as it is used
+	int		2 bytes  in Turbo C++
+	float		4 bytes
+	char		1 byte
+	long int	4 bytes
+	short int	2 bytes (internally uses 1 byte)
+	unsigned int	2 bytes (only +ve values are allowed)
+	double		8 bytes
+	long double	10 bytes
+
+   Also C++ 11 version supports STL (Standard Template Libraires)
+
+I/O statements
+  cout	: Used to display the output (message/variable/expression)
+		cout<<"message";  or
+		cout<<var/expression;
+	  'cout' is an object of 'ostream' class 
+          '<<'  this symbol is called insertion operator 
+	    ex: cout<<"Hello all, welcome to C++";
+		cout<<x;
+		cout<<(2+x)*3;  (expression)		
+		cout<<"total is "<<tot;
+
+  cin	: Used to accept an input to a vairable  
+		cin>>var;    (one or many variables saperated with >>)
+	  'cin' is an object of 'istream' class 
+          '>>'  this symbol is called extraction operator 
+	    ex: int x;
+		cin>>x;
+		int rno;
+		char name[20];
+		float avg;
+		cin>>rno>>name>>avg;
+
+istream and ostream classes are present int iostream.h
+Therefore in every program we need this iostream.h file
+(in Turbo C++)    #include<iostream.h>    
+
+
+(in DevC++ )      #include <iostream>
+		  using namespace std;
