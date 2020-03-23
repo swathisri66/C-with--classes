@@ -1,0 +1,55 @@
+//  classes and object
+class is a combination of variables and functions
+class <classname>
+{
+	private:
+		.........
+		members				members means	
+		.........			-->variables 	
+	public:					-->functions
+		.........
+		members
+		.........
+	protected:
+		.........
+		members
+		.........
+};
+int main()
+{
+	<classname> object(s);	
+	<object>.<public members>;
+}
+
+ACCESS SPECIFIERS
+private		:	They are accessable only within the class definition
+				They are NOT allowed with the object outside the class
+				They are NOT allowed for inheritance to other classes
+
+public		:	They are allowed anywhere within the class
+				They are allowed with the object outside the class
+				They are also allowed for inheritance to other classes
+				
+protected	:	They are allowed anywhere within the class
+				They are NOT allowed with the object outside the class
+				but they are allowed for inheritance to other classes
+				
+------------------------------------------------------------------------------
+				usage within		usage with the obj		usage for
+ 				the class			outside the class		inheritance
+------------------------------------------------------------------------------ 				
+private		:	Allowed				NOT Allowed				NOT Allowed
+			
+public 		:	Allowed				Allowed					Allowed
+	
+protected	:	Allowed				NOT Allowed				Allowed
+------------------------------------------------------------------------------
+
+Object		: 	It is an instance of a class or a real time entity.
+				An object occupies space in the memory
+				The number of bytes to occupied by the object will depend 
+					on the data members (variables) defined in the class
+					
+				Each object contains the data members saperately
+				
+	
