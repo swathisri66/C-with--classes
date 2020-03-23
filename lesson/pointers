@@ -1,0 +1,91 @@
+POINTERS:
+-- A pointer a special type of variable declared with same datatypes but it can store the address
+--   of other variable of same datatype.
+-- An int pointer can store int variable address only
+-- A float pointer can store float variable address only, and so on....
+-- A pointer variable of any datatype takes 4 bytes only, because pointer does not store value
+    it stores the address of the starting byte of the variable
+-- A pointer is declared as 
+	<datatype> *variable;
+	Ex:  int x, *p;        (x is a integer variable, p is a integer pointer varibale)
+operators used pointers
+	&	Address reference operator
+	*	Value reference operator
+	->	pointer to structure variable
+	
+	int x=20, *p;
+	p=&x;			// address of x is stored in pointer p
+	cout<<p;		// prints the address of x
+	cout<<&x;		// prints the address of x
+	cout<<x;		// prints the value of x  (normal method)
+	cout<<*p;		// prints the value of x  (pointer method)
+	
+	pointers can be used for :
+	-	normal variables
+	-	array variables
+	-	structure variables
+	-	functions
+	-	pointers
+	-	files
+	-	objects of a class			(special with c++)
+	-	objects of derived classes	(special with c++)
+		
+	pointer for normal variable
+		int x=40, y=67, z, *p, *q, *r;
+		p=&x;	
+		q=&y;
+		r=&z;
+		cout<<"\n x value is "<<*p;
+		cout<<"\n y value is "<<*q;
+		// z=x+y;   normal method
+		*r = *p + *q;
+		cout<<"\n total value is "<<*r;
+		
+	pointer for an array
+		int x[5], *p;	// one pointer is enough it can store the address of starting element
+		p=&x[0];
+		for(int c=0;c<5;c++)
+		{
+			cout<<"enter a value ";
+			cin>>*p;
+			p++;		// this will increment the pointer by 4 bytes
+		}
+		--------OR----------
+		int x[5], *p;	// one pointer is enough it can store the address of starting element
+		p=&x[0];
+		for(int c=0;c<5;c++)
+		{
+			cout<<"enter a value ";
+			cin>>*(p+c);	// here p is 1001 + 1 this will add 4 bytes
+		}
+	
+	pointers to objects of a class
+	
+	class Sample
+	{
+		int x,y,z;
+		public:
+			void get_data()
+			{
+				......
+			}
+			void show_data()
+			{
+				......
+			}
+	};
+	int main()
+	{
+		// normal method
+		Sample obj1;
+		obj1.get_data();
+		obj1.show_data();
+		// pointer method
+		Sample obj2, *ptr;
+		ptr=&obj2;		// address of object obj2 is stored into the pointer ptr
+//		when pointer contains the address of an object the reference of any element 
+//		is given using the arrow operator ->
+		ptr->get_data();
+		ptr->show_data();
+	}
+
