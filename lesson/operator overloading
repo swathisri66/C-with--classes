@@ -1,0 +1,47 @@
+Operator Overloading is the process of defining an extra meaning for an existing operator.
+ 	Operator : is a symbol which performs an action on operand(s)
+ 	Operand  : is a variable or value on which the operation is done.
+ 	ex:   x=5   here x and 5 are opreands, = is the opreator
+ 		  x++   here x is operand and ++ is operator
+ 		  !(x>5)  here (x>y) is oprand for ! (not) operator  
+ 	
+	Operators	(Unary 	: having only one operand ++  --  !   and
+			     Binary : those having 2 operands +  -  >  == )
+
+    Arithmetic 	:	  	+	-	*	/	%
+    Relational	: 		>	<	==	>=	<=	!=
+    Logical		: 		&& 	||	!
+    Assignment	:		=	+=	-=	*=	/=	%=
+    Ternary		:		? :
+    Incr/Decr	:		++	--
+    Pointer		:		&	*	->
+    Bitwise		:		&	|	^	>>	<<
+    Special		:		sizeof	.
+    C++	special	: 		new		delete	::
+
+C++ allows us to define a new meaning for an existing operator.
+   This is called operator overloading.
+All operators can be overloaded except 4 symbols	
+	::	Scope resolution opetator
+	?:	Ternary/conditional operator
+	.	component reference operator
+	.* 	component dereference operator
+
+So when we use the operator, based on the datatype of the operand, the meaning to 
+  execute will be decided.
+  
+  when we use x++   ---> here if x is of a primitive type, then the old meaning will be executed
+  					---> here if x is an object of a class then, the meaning of the operator
+  							which is defined in that class will be executed.
+  							
+	The required overloaded meaning to execute will be defined inside the class
+To implement operator overloading
+1)  It must be a public function
+2)	The name of the function cannot be user defined, it must be the C++ keyword 'operator'
+      followed by the symbol to be overloaded.
+      ex:   public:
+	  			void operator ++()
+      			{
+      				....code....
+				}
+	
