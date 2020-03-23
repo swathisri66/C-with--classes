@@ -1,0 +1,87 @@
+				control statements
+	conditional 			looping 
+	statements				statements
+	- if else				- for 
+	- switch case			- while		
+							- do while
+--------------------------------------------------------------
+IF-ELSE
+simple if else
+if (<condition>)
+{
+	statements when if is true
+}
+else
+{
+	statements when if is false
+}
+
+
+nested if else
+if (<condition>)
+{
+	statements when if is true
+}
+else if (<condition>)
+{
+	statements when if is true
+}
+else if (<condition>)
+{
+	statements when if is true
+}
+else 
+{
+	statements when all above conditions are false
+}
+
+SWITCH-CASE
+
+switch(variable)
+{
+   case <value> : ...statements....
+   				  break;
+   case <value> : ...statements....
+   				  break;
+   case <value> : ...statements....
+   				  break;
+   default  : .....statement.....
+}
+
+NOTE : Variable can be char or int but NOT float type.
+	   switch-case can compare only individual values (cannot compare range of values)
+       Every 'case' block should have a 'break' statement. 'break' gets the control out of 'switch'
+       If 'break' is not given, it continues until the next 'break' occurance
+       'default' block statements will be executed when variable does not match to any 'case' values
+       'default' is optional block, if it is given, it should be the last block.
+---------------------------------------------------------------------------------------------       
+LOOPS
+for Loop: 	This type of loop is used when number of itterations are known
+--------
+		for(var=initial value ; final val condition ; incr/decr value)
+		{
+			..................
+			    statements
+			..................
+		}
+
+while Loop	This type of loop is used when number of itterations are unknown
+----------
+		while (condition)
+		{
+			.............
+			statements
+			.............
+		}
+		
+while Loop	This type of loop is used when number of itterations are unknown
+----------
+		do
+		{
+			.............
+			statements
+			.............
+		} while (condition);
+		
+		
+		
