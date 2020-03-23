@@ -1,0 +1,103 @@
+Function:
+A function is a set of statements represented with a name.
+A function can be reused number of times
+We describe a function with a given name and call it number of times
+Advantages of using functions:
+1. reduces the length of code/program
+2. reusage of code for different values 
+3. provide readablity/ easy understanding
+
+How to write a function:
+In order to write a program using a function, we have to
+-- declare a function   (along with variables local/global)
+-- call a function      (with required arguements)
+-- describe a function  (with the detailed code/implementation)
+
+Function declaration:
+<return datatype> Function_Name(formal arguments);
+
+return datatype : Means the datatype of the value that will be given 
+		  back from the function after procession
+		  We use void as return datatype for functions which do not return a value
+int get_reverse_number(int x);
+float  get_circle_area(float r);
+float  get_circle_area(int r);
+long int power(int base, int exp);
+void show_remarks(char gr);
+
+    void showEvenOdd(int x);	// declaring a function (globally)     
+    int main()
+    {
+      int a,b,c;
+      cout<<"enter 3 values ";
+      cin>>a>>b>>c;
+      showEvenOdd(a);		// calling a function
+      showEvenOdd(b);		// calling a function
+      showEvenOdd(c);		// calling a function
+    }
+    void show2()
+    {
+       p,q,r
+      showEvenOdd(a);		// calling a function
+      showEvenOdd(b);		// calling a function
+      showEvenOdd(c);		// calling a function
+    }
+    void showEvenOdd(int x)	// describing a function
+    {
+	if (x%2==0)
+	   cout<<"even number";
+ 	else
+	   cout<<"odd number";
+    }
+
+
+	for(i=1;i<=3;i++)
+	{
+	   cout<<"enter a value";
+	   cin>>x;
+
+
+
+
+
+
+
+int main()
+{
+   int base, exp;
+   .......
+   .......
+   ar=M_PI * power(rad,2);
+   ......
+   R1=power(8,5);
+}
+INT POWER(INT X, INT Y)
+{
+res=1;			x	y	c	res=1
+for(c=1;c<=y;c++)	3	4	1	3	
+   res=res*x;				2	9
+RETURN RES;	   			3	27
+}					4	81
+					5
+
+   .......
+   ************
+   r1=getReverse(n1);
+   ************
+   .......
+   .......
+   .......
+   ************
+     10lines
+   ************
+   .......
+   .......
+   .......
+   ************
+     10lines
+   ************
+   .......
+   .......
+   .......
+   .......
+}
