@@ -1,0 +1,80 @@
+OOPS Concepts
+-------------
+OOPS : Object Oriented Programming Structures
+
+Object is a realtime entity that exists in reality and it belogns to a catogary.
+
+each catogary can be considered as a class
+therefore we say every object belongs to a class
+
+In Progrmamming we create the classes, then we create the object of that class
+our program is written in terms of object
+
+Faculty properties (faculty id, name, salary, subjects, contact number....
+  		    teach(), conductExam(), ......  )
+
+TYPES OF PROGRAMMING LANGUAGES
+1) HLL (High Level Languages)   
+   (a)  Proceudre oriented languages  (logic oriented)
+	(ex ForTran, Pascal, COBOL, BASIC, C, Lisp, Algol )
+
+   (b)  Object oriented languages  (logic + data is given importance)
+	(ex: c++, java, c#, python, R lang, Ruby, ABAP.....)
+  
+2) LLL (Low Level Languages)   Ada, Assembly lang, Binary language
+
+OOPS features
+----------------
+1) Classes & Objects
+2) Encapsulation
+3) Abstraction
+4) Inheritance
+5) Polymorphysm
+
+1) Classes & Objects
+   (a) Class   : collection of variables and functions (data members and methods)
+		 variables are called data members
+		 - variables describe the value
+		 functions are called as methods
+		 - describe the action
+		Ex: class Chair 
+			variables(color, type, brand, cost, capacity, no. of legs)
+			functions(buy(), sell(), sit(), move(),....)
+		Ex: class Pen 
+			variables(size, color, type, brand, cost, ink_volume)
+			functions(buy(), sell(), write(), fill_ink(),....)
+		Ex: class Student 
+			variables(idno, name, course, fees, classroom, paid, due)
+			functions(take_admn(), attend_class(), pay_fees(),....)
+
+   (b) Object  : It is an instance of a class. Every object contains all data members
+		 defined in the class. Many objects can be created once a class is defined.
+class Student
+{
+   int x=7;
+   x=10; // error - not allowed. must be used only within a function
+   void f1()
+   {
+      x=10; // valid
+   }
+};
+
+2) Encapsulation   :  Binding of variables and functions as a single unit
+		      The members (variable/functions) can be accessed anywhere within that class only
+		      Functions are the only authorized blocks to access the values of variables.
+
+3) Abstraction     :  The process of hiding the unimportant members and allowing the important 
+		      once to be accessed to the object of the class
+		      This is done by providing the members under access specifiers
+			(public, protected, private members)
+
+4) Inheritance     :  The process of deriving members of one class to another is called inheritance.
+		      Inheritance allows reusage of members of one class in another
+		      
+
+5) Polymorphysm    :  poly - means many / multiple
+		      morph - means behaviour / action
+		      Providing multiple behaviours for an existing member is called polymorphysm
+
+		ex: 	void greet(int n)	void greet(char n[])	void greet()
+			5 + 9		5/4 + 7/3       2'8" + 1'8"     2:30 + 1:50
