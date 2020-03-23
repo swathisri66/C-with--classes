@@ -1,0 +1,42 @@
+CONSTRUCTORS and DESTRUCTORS
+Constructor : It is a function used to create an object & initialize the data members of the class
+			  If the variables are not initialized, then they will contain grabage values
+			  
+			  Constructor has the following special features
+			  1)	It contains the same name as the name of the class
+			  2)	It has no return datatype, not even void
+			  3)	It must be a public function only, cannot be private or protected
+			  4)	such function is called as constructor and will be executed automatically
+			  		when the object of that class is created.
+			  		
+			Constructors are of different types
+			-> System defined constructor : this constructor is created by the compiler when
+											user did not provide any constructor in the class.
+			-> User defined constructor	  : we create the constructor as per our requirement
+					- Default constructor
+					- Parameterized constructor
+					- Copy constructor
+					- Null constructor
+					- Dynamic constructor
+
+Destructor		: It is function used to remove the data members from the object and also
+					remove the object.
+				  If the object is not destroyed then the class will be closed but the 
+				  	variables created by the class will keep occupying the memory.
+				  This causes 2 problems	Memory wastage	&  Memory leakage
+			
+				  Destructor has the following special features
+			  1)	It has the same name as the name of the class prefixed with ~ (tilde symbol)
+			  2)	It has no return datatype, not even void
+			  3)	It must be a public function only, cannot be private or protected
+			  4)	such function is called as destructor and will be executed automatically
+			  		when the main() is about to close. [after the last statement of the program]
+			  		Destructor works for every object once.
+
+			Destructors are of two type
+			-> System defined destructor : this destructor is created by the compiler when
+											user did not provide any destructor in the class.
+			-> User defined destructor	  : we have only one type of destructor
+					- Default destructor
+
+
