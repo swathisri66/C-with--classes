@@ -1,0 +1,17 @@
+/* program to accept 2 values and print them before and after swapping */
+#include <iostream>
+using namespace std;
+int main()
+{
+	int x, y, z;
+	cout<<" enter 2 values ";
+	cin>>x>>y;
+	cout<<"\n before swapping x is "<<x<<" y is "<<y;
+	z = x;     // x is copied to z
+	x = y;     // y value is copied to x
+	y = z;     // z value is copied to y
+	cout<<"\n after swapping x is "<<x<<" y is "<<y;	
+}
+// program to find if the input value is even or odd number
+// program to accept the diameter and print the radius, area and circumference of a circle
+//       rad--->dia/2    area-->3.14*rar*rad		circum=2*3.14*rad;
