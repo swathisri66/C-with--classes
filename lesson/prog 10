@@ -1,0 +1,28 @@
+/* <return datatype> Function_Name(formal arguments) ;
+[var = ] Function_name(actual arguments);
+void functions are those which do not return a value   */
+#include <iostream>
+using namespace std;
+int main()
+{
+	int greet();		// function declaration
+	cout<<"\n beginning of program";
+	cout<<greet();			// calling the function is done 10 times
+    cout<<"---------";
+    k=greet();
+	if(k>10)			// calling the function is done 10 times
+		cout<<"YES";
+	else
+		cout<<"NO";
+	cout<<"\n end of program";
+}
+int greet()			// function description/definition
+{
+	int i;
+	for(i=1;i<=10;i++)
+	{
+	    cout<<"\n "<<i<<" hello all";
+	}
+	return i;
+}
+
