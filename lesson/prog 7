@@ -1,0 +1,27 @@
+// accept a 2 digit number and print if first digit is big or 
+// second digit is big or both digits are same
+#include <iostream>
+using namespace std;
+int main()
+{
+   	int x;
+   	cout<<"enter a 2 digit number ";
+   	cin>>x;
+   	if ((x>=10 && x<=99) || (x>=-99 && x<=-10))
+   	{
+/*	   	if (x/10 > x%10)
+	    	cout<<"first digit is big";
+   		else if (x/10 < x%10)
+    		cout<<"second digit is big";
+	    else
+    	   	cout<<"both digits are equal";  */
+cout<<((x/10 > x%10)?"first digit is big":(x/10 < x%10)?"second digit is big":"both digits are equal");
+    }
+    else
+    	cout<<"not a 2 digit number";
+}
+/*
+					var = (condition) ? value if true : value if false;
+					cout<<(x%2 == 0)?"even number":"odd number";					
+		cout<<(x>y&&x>z)?"first value is big":(y>z)?"second value is big":"third value is big";
+*/
