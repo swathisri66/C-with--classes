@@ -1,0 +1,7 @@
+/* this is a sample program */
+#include <iostream>
+using namespace std;
+int main()
+{
+	cout<<"Hello all, welcome to c++ programming";
+}
