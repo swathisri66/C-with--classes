@@ -1,0 +1,18 @@
+// program to accept the diameter and print the radius, area and circumference of a circle
+//       rad--->dia/2    area-->3.14*rar*rad		circum=2*3.14*rad;
+#include <iostream>
+#include <math.h>
+//   #define PI 3.14
+using namespace std;
+int main()
+{
+	const float PI=3.14;
+	float dia, rad, ar, cr;
+	cout<<"\n enter diameter ";
+	cin>>dia;
+	rad=dia/2;
+	ar=M_PI*pow(rad,2);     // ar=PI*rad*rad;
+	// M_PI and pow() are present in math.h
+	cr=2*PI*rad;
+	cout<<"radius is "<<rad<<"area is "<<ar<<"circumference is "<<cr;
+}
