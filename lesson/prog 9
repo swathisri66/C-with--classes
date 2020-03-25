@@ -1,0 +1,17 @@
+/* program to accept grade (char input) and print remarks (make the program case-insensitive) */
+#include <iostream>
+using namespace std;
+int main()
+{
+	char grade;
+	cout<<"\n enter grade (A/B/C/D) ";
+	cin>>grade;
+	switch(grade)
+	{
+		case 'A' :  case 'a' : cout<<"Good ";   break;
+		case 'B' :  case 'b' : cout<<"Can do better ";   break;
+		case 'C' : 	case 'c' : cout<<"Work hard ";   break;
+		case 'D' : 	case 'd' : cout<<"Poor ";   break;
+		default : cout<<"invalid grade";
+	}
+}
