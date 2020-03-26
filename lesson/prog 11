@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int biggest(int, int);		// function declaration
+	int a,b,c;	
+    cout<<"\n enter 3 int values ";
+	cin>>a>>b>>c;
+	cout<<"biggest of a and b is "<<biggest(a,b); 
+	cout<<"biggest of a and c is "<<biggest(a,c); 
+	cout<<"biggest of b and c is "<<biggest(b,c); 
+	cout<<"\n end of program";
+}
+int biggest(int val1, int val2) 		// function description/definition
+{
+	if (val1 >= val2)
+		return val1;
+	else
+		return val2;
+}
+
