@@ -1,0 +1,47 @@
+/* program using classess and objects  */
+#include <iostream>
+using namespace std;
+class Student
+{
+	private:
+		int rno;
+		char name[15];
+		int s1,s2,s3,tot;
+		float avg;
+	public:
+		void get_student_data()
+		{
+			cout<<"\n enter rno, name, 3 subject marks ";
+			cin>>rno>>name>>s1>>s2>>s3;
+		}
+		void calculate()
+		{
+			tot=s1+s2+s3;
+			avg=tot/3.0;
+		}
+		void show_result()
+		{
+			cout<<"\n total marks "<<tot;
+			cout<<"\n average marks "<<avg;
+		}
+};
+int main()
+{
+/*	Student obj1, obj2;
+    obj1.get_student_data();
+    obj1.calculate();
+    obj1.show_result();
+    obj2.get_student_data();
+    obj2.calculate();
+    obj2.show_result(); */
+    // creating array of objects
+    Student ob[5];		// array will have index 0 to 4
+    for(int c=0;c<5;c++)
+    {
+    	cout<<"\n details of student "<<c+1;
+    	ob[c].get_student_data();
+    	ob[c].calculate();
+    	ob[c].show_result();
+	}
+    
+}
