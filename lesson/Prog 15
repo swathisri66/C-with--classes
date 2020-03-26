@@ -1,0 +1,47 @@
+/* example of function overloading */
+#include <iostream>
+using namespace std;
+int main()
+{
+	void line();
+	void line(char x);
+	void line(char x, int n);
+	void line(int n, char x);
+	int a,b,c;
+    line();    
+	cout<<"\n enter a value ";
+	cin>>a;
+	line(65,'Z');
+	line('Z',65);
+	cout<<"\n enter another value ";
+	cin>>b;
+	line('1');
+	c=a+b;
+	cout<<"\n sum is "<<c;
+	line();
+}
+void line()
+{
+	cout<<"\n";
+	for(int c=1;c<=80;c++)
+	   cout<<"*";
+}
+void line(char x)
+{
+	cout<<"\n";
+	for(int c=1;c<=80;c++)
+	   cout<<x;
+}
+void line(char x, int n)
+{
+	cout<<"\n";
+	for(int c=1;c<=n;c++)
+	   cout<<x;
+}
+void line(int n, char x)
+{
+	cout<<"\n";
+	for(int c=1;c<=n;c++)
+	   cout<<x;
+}
+
