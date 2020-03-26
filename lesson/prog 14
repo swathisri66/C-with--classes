@@ -1,0 +1,34 @@
+/* example of function overloading */
+#include <iostream>
+#include "ramesh.h"
+using namespace std;
+int main()
+{
+	int get_biggest(int x, int y);
+	float get_biggest(float x, float y);
+	int a,b,c,d, res1;
+	float p,q,r, res2;
+	line(20,'^');
+	cout<<"\n enter 4 integer values ";
+	cin>>a>>b>>c>>d;
+	line('=');
+	res1 = get_biggest(get_biggest(a,b), get_biggest(c,d));   // nested calling 
+	cout<<"\n biggest of 4 integers is "<<res1;
+	line('@',50);
+	cout<<"\n enter 3 float values ";
+	cin>>p>>q>>r;
+	res2 = get_biggest(get_biggest(p,q), r);   // nested calling 
+	cout<<"\n biggest of 3 floats is "<<res2;
+	line();
+}
+int get_biggest(int x, int y)
+{
+	cout<<"\n executing biggest of integers";
+	return (x>y)?x:y;		// using a ternary operator
+}
+float get_biggest(float x, float y)
+{
+	cout<<"\n executing biggest of floats";
+	return (x>y)?x:y;		// using a ternary operator
+}
+
