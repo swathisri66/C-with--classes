@@ -1,0 +1,37 @@
+/* program using classess and objects  
+   usage of variable & function of a class with the object */
+#include <iostream>
+using namespace std;
+class Sample
+{
+	private:
+		int x;
+		void f1()
+		{
+			cout<<"\n f1 function";
+		}
+	public:
+		int y;
+		void f2()
+		{
+			cout<<"\n f2 function";
+			f3();
+		}
+	protected:
+		int z;
+		void f3()
+		{
+			f1();
+			cout<<"\n f3 function";
+		}
+};
+int main()
+{
+	Sample obj;
+//	cout<<"\n value of x is "<<obj.x;	// private variable is not allowed with the object
+	cout<<"\n value of y is "<<obj.y;
+//	cout<<"\n value of z is "<<obj.z;	// protected variable is not allowed with the object
+//    obj.f1();
+    obj.f2();
+//    obj.f3();
+}
