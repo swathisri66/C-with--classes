@@ -1,0 +1,50 @@
+/*			  Polymorphysm    (multiple behaviour)
+			   /       \ 
+		Static 			Dynamic
+	Polymorphysm		Polymorphysm
+
+-->function overloading		--> virtual functions
+-->operator overloading
+
+static polymorphysm is also called as compiletime polymorphysm or early binding
+dynamic polymorphysm is also called as runtime polymorphysm or late binding       */
+
+// Function overloading :  this is a concept where we provide multiple functions of 
+//							same name but differ in (1) number of arguments	   (OR)	
+//													(2) type of arguments      (OR)
+//													(3) sequence of arguments
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	int h;
+	void greet();
+	void greet(int);
+	void greet(char []);
+	cout<<"\n program begins";
+	cout<<"enter the time in hours ";
+	cin>>h;
+	greet(h);			// function call with int argument
+	greet("ramesh");	// function call with char array argument
+	greet();			// function call with NO argument
+	greet("vijay");		// function call with char array argument
+}
+void greet()
+{
+	cout<<"\n hello all";
+}	
+void greet(int hrs)
+{
+	if (hrs%24 < 12)
+		cout<<"\n Hello Good Morning";
+	else if (hrs%24 < 16)
+		cout<<"\n Hello Good Afternoon";
+	else
+		cout<<"\n Hello Good Evening";
+}
+void greet(char n[])
+{
+	cout<<"\n hello "<<n;
+}
+
