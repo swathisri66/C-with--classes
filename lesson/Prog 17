@@ -1,0 +1,22 @@
+/* program using classess and objects 
+   bytes occupied with objects */
+#include <iostream>
+using namespace std;
+class Sample
+{
+	private:
+		int x;
+	public:
+	//	int z;
+	protected:
+		double w;
+		char p;
+};
+int main()
+{
+	int k[10];
+	Sample object1, obj[10];   // obj is an array of 10 objects
+	cout<<"\n number of bytes in k "<<sizeof(k);
+	cout<<"\n number of bytes in object1 "<<sizeof(object1);
+	cout<<"\n number of bytes in obj "<<sizeof(obj);
+}
