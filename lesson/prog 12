@@ -1,0 +1,28 @@
+// returning character value from a function having integer arguments
+#include <iostream>
+using namespace std;
+int main()
+{
+	int s1,s2,s3;
+	char grade;
+	char get_grade(int , int, int);  // function declaration
+	cout<<"\n enter 3 subject marks ";
+	cin>>s1>>s2>>s3;
+	grade=get_grade(s1,s2,s3);		// funciton calling
+	cout<<"grade is "<<grade;
+}
+char get_grade(int a, int b, int c)  // function description
+{
+	if (a>=35 && b>=35 && c>=35)
+	{
+		float avg=(a+b+c)/3.0;
+		if (avg>=60)
+			return 'A';
+		else if (avg>=50)
+			return 'B';
+		else
+			return 'C';		
+	}
+	else
+		return 'D'; 
+}
