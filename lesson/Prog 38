@@ -1,0 +1,35 @@
+// multiple inheritance : Deriving a class from multiple base classes 
+#include <iostream>
+using namespace std;
+class  Sample1
+{
+	public:
+		void f1()
+		{
+			cout<<"\n f1 function ";
+		}
+};
+class  Sample2
+{
+	public:
+		void f2()
+		{
+			cout<<"\n f2 function ";
+		}
+};
+class  Sample3 : public Sample1, public Sample2
+{
+	public:
+		void f3()
+		{
+			cout<<"\n f3 function ";
+		}
+};
+int main()
+{
+	Sample3 obj;  
+	obj.f1();
+	obj.f2();
+	obj.f3();
+}
+
