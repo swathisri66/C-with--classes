@@ -1,0 +1,36 @@
+/* null constructor : It is a contructor which does not have any arguments 
+   and no statements in the function body.  (function body will be empty)
+ it is used to substitute the System defined constructor's functionality 
+   in a class that has user defined constructor
+ we cannot have a default and null constructor both in a single class
+   as their prototype is same  */
+#include <iostream>
+using namespace std;
+class Sample
+{
+	private:
+		int x,y,z;
+	public:
+		Sample()		// null constructor
+		{ }
+        Sample(int a, int b, int c)
+		{
+			x=a;   y=b;   z=c;
+		}
+		void getValues()
+		{
+			cout<<"enter values for x and y and z";
+			cin>>x>>y>>z;
+		}
+		void show()
+		{
+			cout<<"\n x value is "<<x<<"\n y value is "<<y<<"\n z value is "<<z;
+		}
+};
+int main()
+{
+	Sample obj1(40,60,70), obj2;
+	obj2.getValues();
+	obj1.show();
+	obj2.show();
+}
