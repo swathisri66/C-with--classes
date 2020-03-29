@@ -1,0 +1,48 @@
+/*  Constructor Overloading : the process of having many constructors in a class so that
+		we have multiple ways of creating an object.
+	Depending on the number,type of arguments, that corresponding constructor will be executed
+	The purpose of having constructor overloading is to provide multiple ways of creating obj.
+ */
+#include <math.h>
+#include <iostream>
+using namespace std;
+class Sample
+{
+	private:
+		int x,y;
+		float z;
+	public:
+		Sample()
+		{
+			x=11; y=22;	z=3.3;						
+			cout<<"\n Object is created using default constructor";
+		}
+		Sample(int a, float b, int c)
+		{
+			x=a;  z=b;  y=c;			
+			cout<<"\n Object is created using parameterized constructor with 3 args";
+		}
+		Sample(int a, int b)
+		{
+			x=a;  y=b;	z=(a+b)/2.0;		
+			cout<<"\n Object is created using parameterized constructor with 2 args";
+		}
+		Sample(int p)
+		{
+			x=p;  y=p*p;	z=sqrt(p);		
+			cout<<"\n Object is created using parameterized constructor with 1 args";
+		}
+		void show()
+		{
+			cout<<"\n x is "<<x<<"\n y is "<<y<<"\n z is "<<z;
+		}
+};
+int main()
+{
+	Sample obj1(100, 95.5, 30), obj2(5), obj3, obj4(4,7);
+	obj1.show();
+	obj2.show();
+	obj3.show();
+	obj4.show();
+}
+
