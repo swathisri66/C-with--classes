@@ -1,0 +1,43 @@
+// single inheritance private mode
+#include <iostream>
+using namespace std;
+class Student
+{
+	private:
+		int rno;
+		char name[20];
+		int s1;
+	protected:
+		int s2,s3;
+		int get_s1()      // if we want private member to be accessed in the derived class
+		{				  // then, we write a public/protected function that returns the
+			return s1;	  // value of such private variable.
+		}
+	public:
+		void get_data()
+		{
+			cout<<"\n enter idno, name, marks of 3 subjects ";
+			cin>>rno>>name>>s1>>s2>>s3;
+		}
+};
+class Result : public Student   // try with public
+{
+	private:
+		int tot;
+		float avg;
+	public:
+		void show_result()
+		{
+//			get_data();
+			tot=get_s1()+s2+s3;
+			avg=tot/3.0;
+			cout<<"\n total marks "<<tot;
+			cout<<"\n avg marks "<<avg;
+		}
+};
+int main()
+{
+	Result obj;
+	obj.get_data();
+	obj.show_result();
+}
