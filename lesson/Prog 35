@@ -1,0 +1,49 @@
+/*
+Inheritance : The process of deriving members of one class to another is called Inheritance
+			  The class from which the inheritance is taken is called base/parent class
+			  The class into which the inheritance is given is called derived/child class
+			  Inheritance allows reusability of members of one class in another
+			  Only public and protected members are allowed for inheritance, private not allowed
+			  Inheritance of members is allowed in 3 modes and 5 types
+			   (explained in paint)
+			   */
+#include <iostream>
+using namespace std;
+class Sample1
+{
+	private:
+		int x;
+	public:
+		int y;
+	protected:
+		int z;
+};
+class Sample2 : public Sample1   // in this line colon (:) indicates inheritance mode is public
+{					 //when inheritance mode is not indicated, then it is 'private' by default
+	private:
+		int p;
+	public:
+		int q;
+	protected:
+		int r;
+};
+
+int main()
+{
+	Sample1 ob1;
+	cout<<"number of bytes in ob1 "<<sizeof(ob1);   // sum of bytes of all data members
+	Sample2 ob2;
+	cout<<"number of bytes in ob2 "<<sizeof(ob2);  
+	// sum of bytes of all data members of base and derived class
+//	cout<<ob1.x;
+	cout<<"\n y value is "<<ob1.y;
+//	cout<<ob1.z;	
+//    cout<<ob2.x;
+    cout<<ob2.y;
+//    cout<<ob2.z;
+//    cout<<ob2.p;
+    cout<<ob2.q;
+//    cout<<ob2.r;
+}
+			  
+
