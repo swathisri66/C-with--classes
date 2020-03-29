@@ -1,0 +1,46 @@
+/*  Copy Constructor  :  the process of creating object using the values of existing object
+		is called copy constructor.
+	To use the copy constructor we give the obejct of the same class as an argument
+	In the constructor we have to use & with the parameter variable
+ */
+#include <math.h>
+#include <iostream>
+using namespace std;
+class Sample
+{
+	private:
+		int x,y;
+		float z;
+	public:
+		Sample()
+		{
+			x=11; y=22;	z=3.3;						
+			cout<<"\n Object is created using default constructor";
+		}
+		Sample(int a, int b, float c)
+		{
+			x=a;  y=b;  z=c;			
+			cout<<"\n Object is created using parameterized constructor with 3 args";
+		}
+		Sample(Sample &t)
+		{
+			x=t.x;
+			y=t.y;
+			z=t.z;
+			cout<<"\n Object is created using copy constructor ";
+		}
+		void show()
+		{
+			cout<<"\n x is "<<x<<"\n y is "<<y<<"\n z is "<<z;
+		}
+};
+int main()
+{
+	Sample obj1(100, 30, 95.5), obj2, obj3(obj1), obj4, obj5(obj3);
+	obj1.show();
+	obj2.show();
+	obj3.show();
+	obj4.show();
+	obj5.show();
+}
+
