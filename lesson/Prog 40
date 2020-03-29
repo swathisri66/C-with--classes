@@ -1,0 +1,41 @@
+/* Hierarchical Inheritance : Deriving many sub classes from one base class
+     In this type of inheritance, as there are many derived classes, we need to 
+     create object of each of the derived classes to access that class & base class member 
+  Hierarchical Inheritance is many single inheritances where base class is common  */
+
+#include <iostream>
+using namespace std;
+class  Sample1
+{
+	public:
+		void f1()
+		{
+			cout<<"\n f1 function ";
+		}
+};
+class  Sample2 : public Sample1
+{
+	public:
+		void f2()
+		{
+			cout<<"\n f2 function ";
+		}
+};
+class  Sample3 : public Sample1
+{
+	public:
+		void f3()
+		{
+			cout<<"\n f3 function ";
+		}
+};
+int main()
+{
+	Sample2 ob1;
+	ob1.f1();
+	ob1.f2();
+	Sample3 ob2;  
+	ob2.f1();
+	ob2.f3();
+}
+
