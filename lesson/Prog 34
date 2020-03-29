@@ -1,0 +1,45 @@
+/* Dynamic constructor :  
+
+
+*/
+#include <string.h>
+#include <iostream>
+using namespace std;
+class Emp
+{
+	private:
+		int empid;
+		char *empname, *fname, *dept, *desig;
+		long int salary;
+    public:
+    	Emp(int a, char *b, char *c, char *d, char *e, long int f)
+    	{
+    		empid=a;
+    		empname=new char[strlen(b)+1];		// new creates dynamic memory
+    		strcpy(empname,b);
+    		fname=new char[strlen(c)+1];		// new creates dynamic memory
+    		strcpy(fname,c);
+    		dept=new char[strlen(d)+1];		// new creates dynamic memory
+    		strcpy(dept,d);
+    		desig=new char[strlen(e)+1];		// new creates dynamic memory
+    		strcpy(desig,e);
+    		salary=f;
+		}    
+		void show()
+		{
+			cout<<empid<<empname<<fname<<dept<<desig;
+		}
+		~Emp()
+		{
+			delete empname;
+			delete fname;
+			delete dept;
+			delete desig;
+		}
+};
+int main()
+{
+	Emp obj1(101,"raju","kiran","hr","manager",25000);
+	obj1.show();          
+}
+	        
