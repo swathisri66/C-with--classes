@@ -1,0 +1,52 @@
+// inheritance
+#include <iostream>
+using namespace std;
+class Sample1
+{
+	private:
+		void f1()
+		{
+			cout<<"\n f1 function";
+		}
+	public:
+		void f2()
+		{
+			cout<<"\n f2 function";
+		}
+	protected:
+		void f3()
+		{
+			cout<<"\n f3 function";
+		}
+};
+class Sample2 : protected Sample1  
+{				//when inheritance mode is not indicated, then it is 'private' by default
+	private:
+		void f4()
+		{
+			cout<<"\n f4 function";
+		}
+	public:
+		void f5()
+		{
+			cout<<"\n f5 function";
+		}
+	protected:
+		void f6()
+		{
+			cout<<"\n f6 function";
+		}
+};
+
+int main()
+{
+	Sample2 ob2;  // private     public     protected
+	ob2.f1();     //   NOT         NOT         NOT
+	ob2.f2();     //   NOT         yes		   NOT
+//	ob2.f3();     //   NOT         NOT         NOT
+//	ob2.f4();     //   NOT         NOT         NOT
+	ob2.f5();     //   yes         YES		   yes
+//	ob2.f6();     //   NOT         NOT         NOT
+}
+			  
+
