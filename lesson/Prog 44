@@ -1,0 +1,39 @@
+/*  friend functions
+These function are non-member functions but can access even the private data of the class
+*/
+#include <iostream>
+using namespace std;
+class Sample
+{
+	int x;
+	public:
+		friend void display(Sample tobj);
+		void set();
+		void show();
+		void change();
+};
+void Sample::set()
+{
+	x=30;
+}
+void Sample::show()
+{
+	cout<<x;
+}
+void Sample::change()
+{
+	x=x+5;
+}
+void display(Sample tobj)
+{
+	cout<<"\n from friend function "<<tobj.x;
+}
+int main()
+{
+	Sample obj;
+	obj.set();
+	obj.show();
+	display(obj);
+	obj.change();
+	display(obj);
+}
