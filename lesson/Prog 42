@@ -1,0 +1,57 @@
+/* Behaviour of constructors and destructors in derived classes
+ --  When an object of derived class is created the base class 'default' constructor
+      gets executed automatically and then the derived class constructor is executed.
+ --  in order to execute the base class parameterized constructor we have to call that
+      constructor by passing the required arguments in same line of the derived constructor  */
+#include <iostream>
+using namespace std;
+class A
+{
+	int x,y;
+	public:
+		A() {   x=10;  y=20; cout<<"\n default constructor of class A";  }
+		A(int p, int q) {   x=p;  y=q; cout<<"\n parameterized constructor of class A";  }
+		void show1() {  cout<<x<<"\t"<<y<<endl;		}
+		~A()
+		{
+			cout<<"\n default destructor of class A ";
+			cout<<"\n*****************************************************";
+		}
+};
+class B : public A
+{
+	int v, w;
+	public:
+		B() : A(11,22)
+		{ 
+		  v=100;  w=200; cout<<"\n default constructor of class B"; 
+		}
+		B(int m, int n) : A(m+n, m*n)
+		{ 
+		  v=m;  w=n; cout<<"\n parameterized constructor of class B";  
+		}
+		void show2() {  cout<<v<<"\t"<<w<<endl;		}
+		~B()
+		{
+			cout<<"\n default destructor of class B ";
+			cout<<"\n*****************************************************";
+		}
+
+
+};
+int main()
+{
+	A ob1;
+	ob1.show1();
+	cout<<"\n-----------------------------------------";
+	A ob2(55,66);
+	ob2.show1();
+	cout<<"\n-----------------------------------------";
+	B ob3;
+	ob3.show1();
+	ob3.show2();
+	cout<<"\n-----------------------------------------";
+	B ob4(888,999);
+	ob4.show1();
+	ob4.show2();
+}
