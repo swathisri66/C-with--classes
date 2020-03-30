@@ -1,0 +1,53 @@
+// Hybrid inheritance : It is a combination of more than one type of inheritances
+// Special case we have is Hybrid multi-path inheritance
+#include <iostream>
+using namespace std;
+class A
+{
+	public:
+		void f1()
+		{
+			cout<<"\n this f1 function";
+		}
+};
+class B : virtual public A
+{
+	public:
+		void f2()
+		{
+			cout<<"\n this f2 function";
+		}
+};
+class C :  public virtual A
+{
+	public:
+		void f3()
+		{
+			cout<<"\n this f3 function";
+		}
+};
+class D : public B, public C
+{
+	public:
+		void f4()
+		{
+			cout<<"\n this f4 function";
+		}
+};
+int main()
+{
+	A ob1;
+	ob1.f1();
+	B ob2;
+	ob2.f1();
+	ob2.f2();
+	C ob3;
+	ob3.f1();
+	ob3.f3();
+	D ob4;
+	ob4.f1();
+	ob4.f2();
+	ob4.f3();
+	ob4.f4();
+}
+
