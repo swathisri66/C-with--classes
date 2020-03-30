@@ -1,0 +1,41 @@
+// usage of scope resolution operator  (::)
+#include <iostream>
+using namespace std;
+class Sample
+{
+	private:
+		void greet();
+		int x,y,z;
+	public:
+		void get_data();
+		void calculate();
+		void show_data();
+};
+void Sample::greet()
+{
+	cout<<"hello welcome";
+}
+void Sample::calculate()
+{
+	z=x+y;
+}
+void Sample::get_data()
+{
+    greet();
+    cout<<"\n enter 2 values ";
+    cin>>x>>y;
+}
+void Sample::show_data()
+{
+	cout<<"\n x value is "<<x;
+	cout<<"\n y value is "<<y;
+	cout<<"\n z value total is "<<z;
+}
+int main()
+{
+	Sample obj;
+	//obj.greet();	   //	private Fn. cannot be called the object 
+	obj.get_data();
+	obj.calculate();
+	obj.show_data();
+}
