@@ -1,0 +1,38 @@
+// friend function working for multiple objects of a same class
+// program to find the student with highest marks
+#include <iostream>
+using namespace std;
+class Student
+{
+	private:
+		int s1,s2,s3,tot;
+	public:
+		void get_marks();
+		friend void show_highest(Student t1, Student t2); // introducing the function to the class
+};
+void Student::get_marks()
+{
+	cout<<"\n enter 3 subject marks ";
+	cin>>s1>>s2>>s3;
+}
+void show_highest(Student t1, Student t2) 
+{
+	t1.tot = t1.s1 + t1.s2 + t1.s3;
+	t2.tot = t2.s1 + t2.s2 + t2.s3;
+	cout<<"\n total of first student "<<t1.tot;
+	cout<<"\n total of second student "<<t2.tot;
+	if (t1.tot > t2.tot)
+		cout<<"\n first student got highest";
+	else if (t1.tot < t2.tot)
+		cout<<"\n second student got highest";
+	else
+		cout<<"\n both students got the same marks";
+}
+int main()
+{
+	Student st1, st2;
+	st1.get_marks();
+	st2.get_marks();
+	show_highest(st1, st2);
+}
+
