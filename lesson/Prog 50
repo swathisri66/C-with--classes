@@ -1,0 +1,18 @@
+// program to find biggest of 3 values - using pointers
+#include <iostream>
+using namespace std;
+int main()
+{
+	int x, y, z, *p, *q, *r;
+	p=&x;	// address of x is stored into the pointer p
+	q=&y;	// address of y is stored into the pointer q
+	r=&z;
+	cout<<"\n enter 3 values ";
+	cin>>*p>>*q>>*r;
+    if(*p > *q  &&  *p > *r)
+ 	   cout<<"\n first value is biggest"<<*p;
+    else if(*q  > *r)
+ 	   cout<<"\n second value is biggest"<<*q;
+    else
+ 	   cout<<"\n third value is biggest"<<*r;
+}
