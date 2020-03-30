@@ -1,0 +1,15 @@
+// program to add 2 values - using pointers
+#include <iostream>
+using namespace std;
+int main()
+{
+	int x=40, y=30, z, *p, *q, *r;
+	p=&x;	// address of x is stored into the pointer p
+	q=&y;	// address of y is stored into the pointer q
+	r=&z;
+	cout<<"\n value of x and y are "<<*p<<"   "<<*q;
+	z=x+y;
+	cout<<"\n sum of the values is "<<z;
+	*r=*p+*q;
+	cout<<"\n sum of the values using pointer is "<<*r;
+}
