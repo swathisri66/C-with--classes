@@ -1,0 +1,42 @@
+// processing objects of multiple classes in a friend function
+#include <iostream>
+using namespace std;
+class A;	// forward declaration - declaring a class before describing it
+class B;	// forward declaration - declaring a class before describing it
+class A
+{
+	int a;
+	public:
+		void getA();
+		friend void show_average(A t1, B t2);
+};
+class B
+{
+	int b;
+	public:
+		void getB();
+		friend void show_average(A t1, B t2);
+};
+void A::getA()
+{
+	cout<<"enter value of a ";
+	cin>>a;
+}
+void B::getB()
+{
+	cout<<"enter value of b ";
+	cin>>b;
+}
+void show_average(A t1, B t2)
+{
+	cout<<"average is "<<(t1.a+t2.b)/2.0;
+}
+int main()
+{
+ 	A ob1;
+ 	B ob2;
+ 	ob1.getA();
+ 	ob2.getB();
+ 	show_average(ob1,ob2);
+}
+
