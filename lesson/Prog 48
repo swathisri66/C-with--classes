@@ -1,0 +1,17 @@
+// program using pointers
+#include <iostream>
+using namespace std;
+int main()
+{
+	double w, *o;
+	int x=40, y=30, *p, *q;
+	char z, *r;
+	p=&x;	// address of x is stored into the pointer p
+	q=&y;	// address of y is stored into the pointer q
+	cout<<"\n addresses of x and y are "<<p<<"\t"<<q;
+	cout<<"\n number of bytes of x, p are "<<sizeof(x)<<"  "<<sizeof(p);
+	cout<<"\n number of bytes of y, q are "<<sizeof(y)<<"  "<<sizeof(q);
+	cout<<"\n number of bytes of z, r are "<<sizeof(z)<<"  "<<sizeof(r);
+	cout<<"\n number of bytes of w, o are "<<sizeof(w)<<"  "<<sizeof(o);
+	cout<<"\n value of x and y are "<<*p<<"   "<<*q;
+}
