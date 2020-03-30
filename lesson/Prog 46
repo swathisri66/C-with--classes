@@ -1,0 +1,46 @@
+// program to add length objects (represented by feet and inches)
+// operator overloading using friend functions
+#include <iostream>
+using namespace std;
+class Length
+{
+	private:
+		int ft, in;
+	public:
+		void get_length();
+		void show_length();
+		friend Length operator+(Length t1, Length t2);
+};
+void Length::get_length()
+{
+	cout<<"\n enter values for feet and inches ";
+	cin>>ft>>in;
+}
+void Length::show_length()
+{
+	cout<<"\n "<<ft<<" Feet, "<<in<<" Inches";
+}
+Length operator+(Length t1, Length t2)
+{
+	Length res;
+	res.ft = t1.ft + t2.ft;
+	res.in = t1.in + t2.in;
+	if (res.in>=12)
+	{
+		res.ft=res.ft+1;
+		res.in=res.in-12;
+	}
+	return res;
+}
+
+int main()
+{
+	Length table1, table2, table3;
+	table1.get_length();
+	table2.get_length();
+	table3=table1+table2;     //internally taken as --> table3=operator+(tabel1, table2);
+	table1.show_length();
+	table2.show_length();
+	table3.show_length();
+}
+
