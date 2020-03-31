@@ -1,0 +1,54 @@
+// pointers to objects of derived classes (overriding-dynamic polymorphysm)
+#include <iostream>
+using namespace std;
+class Sample1
+{
+	public:
+		void show1();
+};
+class Sample2 : public Sample1
+{
+	public:
+		void show1();
+};
+void Sample1::show1()
+{
+	cout<<"\n this is show1() function of base class ";
+}
+void Sample2::show1()
+{
+	cout<<"\n this is show1() function of derived class ";
+}
+int main()
+{
+	// pointer method   (faster method)
+	Sample1 *p, obj1;
+	Sample2 obj2;
+	p=&obj1;
+	p->show1();	// base class show1() function is executes
+	p=&obj2;	// assigning the address of derived object to the base class pointer
+	p->show1(); // base class show1() function is executed
+	// here, inorder to execute the derived class show function using base class pointer
+	// we have 2 options.  (1) type compatibility  (2)  virtual functions 
+	// type compatibility or is also called as type conversion
+	// we type cast the base class pointer as a derived class pointer
+	((Sample2 *)p)->show1();       // this executed derived class show1()
+	
+/*	Type casting for normal variables
+	int x=9, y=2, z;
+	z=x/y;    // z will have 4
+	float w;
+	w=x/y;    // w will have 4.0
+	// now by using type casting
+	w=(float)x/y;  // w will have 4.5
+	w=x/(float)y;  // w will have 4.5
+	w=(float)x/(float)y;  // same 4.5
+
+	int k=65;
+	cout<<k;
+	cout<<(char)k;   // ASCII character of 65 ie. A is printed
+	
+	float x=5.9;
+	cout<<x;        // output is 5.9
+	cout<<(int)x;   // output is 5     */
+}
