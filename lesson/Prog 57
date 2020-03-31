@@ -1,0 +1,27 @@
+// program to accept user input and store it in the file
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main()
+{
+	int rno, s1, s2, s3;
+	char name[20], ch;
+//	ofstream outfile("marks.txt");  // file created using parameterized constructor
+//       OR
+//	ofstream outfile;  // file object created
+//	outfile.open("marks.txt");   // opening the file using 'outfile' object
+//  in any of the methods the file is created it is opened in 'ios::out' mode
+//  'ios::out' will open a new file or overwrite the file if it already exists
+//  in order not to overwrite but open the same file to continue we use 'ios::app'
+//  'ios::app'  opens the existing file for continuing the file with existing data
+	ofstream outfile("marks.txt",ios::app);  // file created in append mode
+	do
+	{
+		cout<<"\n enter rno, name 3 subject marks ";
+		cin>>rno>>name>>s1>>s2>>s3;
+		outfile<<"\n "<<rno<<" "<<name<<" "<<s1<<" "<<s2<<" "<<s3;
+		cout<<"Repeat y/n : ";  
+		cin>>ch;
+	}while(ch=='Y' || ch=='y');
+	outfile.close();
+}
