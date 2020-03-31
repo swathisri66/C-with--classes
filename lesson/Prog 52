@@ -1,0 +1,40 @@
+// using pointers to object of a class
+#include <iostream>
+using namespace std;
+class Sample
+{
+	int x,y,z;
+	public:
+		void get_data();
+		void show_data();
+		void calculate();
+};
+void Sample::get_data()
+{
+	cout<<"\n enter 2 values ";
+	cin>>x>>y;
+}
+void Sample::calculate()
+{
+	z=x+y;
+}
+void Sample::show_data()
+{
+	cout<<"\n x value is "<<x;
+	cout<<"\n y value is "<<y;
+	cout<<"\n z value is "<<z;
+}
+int main()
+{
+	// normal method
+	Sample obj;
+	obj.get_data();
+	obj.calculate();
+	obj.show_data();
+	// pointer method   (faster method)
+	Sample obj2, *p;
+	p=&obj2;	// when pointer contains address of an object then the reference of
+	p->get_data();   // the elements is given using the -> arrow operator
+	p->calculate();
+	p->show_data();
+}
