@@ -1,0 +1,25 @@
+// program to search for user given data from the file and display
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main()
+{
+	int rno, s1, s2, s3, tot, count=0, trno;
+	float avg;
+	char name[20];
+	cout<<"\n enter rno to search ";
+	cin>>trno;
+	ifstream infile("marks.txt");  // file is opened 'ios::in' (input/read) mode
+	while(infile>>rno>>name>>s1>>s2>>s3)   // to read data from file to variables
+	{
+        if (rno==trno)
+		{
+			tot=s1+s2+s3;   avg=tot/3.0;
+			cout<<"\n "<<rno<<"\t"<<name<<"\t"<<s1<<"\t"<<s2<<"\t"<<s3<<"\t"<<tot<<"\t"<<avg;
+			count++;
+		}
+	}
+	if (count==0)
+		cout<<"\n\n record not found ";
+	infile.close();
+}
