@@ -1,0 +1,52 @@
+// pointers to objects of derived classes 
+#include <iostream>
+using namespace std;
+class Sample1
+{
+	protected:
+		int x,y;
+	public:
+		void get_xy();
+		void show_xy();
+};
+class Sample2 : public Sample1
+{
+	int z;
+	public:
+		void calculate();
+		void show_sum();
+};
+void Sample1::get_xy()
+{
+	cout<<"\n enter 2 values ";
+	cin>>x>>y;
+}
+void Sample1::show_xy()
+{
+	cout<<"\n x value is "<<x;
+	cout<<"\n y value is "<<y;
+}
+void Sample2::calculate()
+{
+	z=x+y;
+}
+void Sample2::show_sum()
+{
+	cout<<"\n the sum is "<<z;
+}
+int main()
+{
+	// normal method
+	Sample2 obj;
+	obj.get_xy();
+	obj.show_xy();
+	obj.calculate();
+	obj.show_sum();
+	// pointer method   (faster method)
+	Sample2 obj2, *p;
+	p=&obj2;	// when pointer contains address of an object then the reference of
+	p->get_xy();   // the elements is given using the -> arrow operator
+	p->show_xy();
+	p->calculate();
+	p->show_sum();
+}
