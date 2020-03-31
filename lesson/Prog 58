@@ -1,0 +1,19 @@
+// program to read data from the file and display the calculated values
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main()
+{
+	int rno, s1, s2, s3, tot, count=0;
+	float avg;
+	char name[20];
+	ifstream infile("marks.txt");  // file is opened 'ios::in' (input/read) mode
+	while(infile>>rno>>name>>s1>>s2>>s3)   // to read data from file to variables
+	{
+		tot=s1+s2+s3;   avg=tot/3.0;
+		cout<<"\n "<<rno<<"\t"<<name<<"\t"<<s1<<"\t"<<s2<<"\t"<<s3<<"\t"<<tot<<"\t"<<avg;
+		count++;
+	}
+	cout<<"\n\n number of records listed "<<count;
+	infile.close();
+}
