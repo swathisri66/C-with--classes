@@ -1,0 +1,22 @@
+// program to find sum of 5 values of an array - using pointers
+#include <iostream>
+using namespace std;
+int main()
+{
+	int x[5], c, sum, *p, *q;
+	p=&x[0];	//  OR   p=x;  this is possible only when x is an array
+	q=&sum;
+    *q=0;    //  sum=0;
+	for(c=0;c<5;c++)
+	{
+		cout<<"enter a value ";
+		cin>>*p;
+		*q=*q+*p;     //  same as sum=sum+x[c];
+		p++;		  // p will now increment by 4 bytes and point to next variable 
+		// increment the pointer is called pointer arithmetic
+	}
+	p=&x[0];     // to reset the pointer to first element
+	for(c=0;c<5;c++)
+		cout<<"\n"<<*p++;
+    cout<<"\n the sum of values is "<<sum;
+}
