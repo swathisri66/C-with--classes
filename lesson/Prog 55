@@ -1,0 +1,41 @@
+// virtual function : A function which is supressed/hidden when its duplicate
+// exists in the derived class
+// a virtual function must be declared in the base class only
+// a virtual function must be declared as public function
+#include <iostream>
+using namespace std;
+class Sample1
+{
+	public:
+		virtual void show1();
+};
+class Sample2 : public Sample1
+{
+	public:
+		void show1();
+};
+void Sample1::show1()
+{
+	cout<<"\n hello base class show function ";
+}
+void Sample2::show1()
+{
+	cout<<"\n hai derived class show function ";
+}
+int main()
+{
+	Sample1 obj1, *p;
+	Sample2 obj2;
+	p=&obj1;        // base class pointer containing the address of base class object
+//	((Sample2 *)p)->show1();		// derived class show1() is executed
+    p->show1();
+    p=&obj2;
+    p->show1();
+/*    we can observe a polymorphic behaviour of the pointer
+    when pointer contains the address of base class object, it executes the base class function
+    and when the same pointer contains the address of the derived object, it executes the derived class function
+    This is called as Runtime polymorphysm or late binding or Dynamic polymorphysm
+    As the decision about which function to execute is decided at runtime we call it as dynamic polymorphysm
+*/    
+}
+
