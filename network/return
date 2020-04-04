@@ -1,0 +1,20 @@
+// C code to show not using return 
+// statement in void return type function 
+  
+#include <stdio.h> 
+  
+// void method 
+void Print() 
+{ 
+    printf("Welcome to GeeksforGeeks"); 
+} 
+  
+// Driver method 
+int main() 
+{ 
+  
+    // Calling print 
+    Print(); 
+  
+    return 0; 
+} 
