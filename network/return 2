@@ -1,0 +1,23 @@
+// C code to show using return statement 
+// with a value in void return type function 
+  
+#include <stdio.h> 
+  
+// void method 
+void Print() 
+{ 
+    printf("networks"); 
+  
+    // void method using the return 
+    // statement to return a value 
+    return 10; 
+} 
+  
+// Driver method 
+int main() 
+{ 
+  
+    // Calling print 
+    Print(); 
+    return 0; 
+} 
